@@ -14,17 +14,18 @@
         }
       }
     ],
-    "stage-0"
+    "stage-0",
+    "vue-app"
   ],
   "plugins": [
     "transform-async-to-generator",
     "transform-runtime",
-    "transform-decorators-legacy",
+    "transform-decorators-legacy"
   ],
   "env": {
     "test": {
       "plugins": [
-        "dynamic-import-node",
+        "dynamic-import-node"
 //        "rewire"
       ]
     }
