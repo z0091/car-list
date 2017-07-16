@@ -8,7 +8,8 @@
   },
   "plugins": [
     "promise",
-    "security"
+    "security",
+    "html"
   ],
   "parserOptions": {
     "ecmaVersion": 6,

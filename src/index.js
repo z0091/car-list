@@ -1,3 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('HI!'); // eslint-disable-line no-console
+import Vue from 'vue';
+import App from './App.vue';
+
+
+new Vue({ // eslint-disable-line no-new
+    el: '#app',
+    template: '<App/>',
+    components: { App },
 });
