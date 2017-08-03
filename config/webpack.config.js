@@ -128,8 +128,6 @@ module.exports = {
             template: path.resolve(srcPath, 'index.html'),
             hash: false,
             version,
-            api_prefix: config.get('app:apiPrefix'),
-            printer_prefix: config.get('app:printerPrefix'),
             favicon: path.resolve(assetsPath, './img/favicon.png'),
             filename: 'index.html',
             inject: 'body',
