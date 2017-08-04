@@ -16,6 +16,23 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         devtool: '',
     },
+    db: {
+        dbname: '',
+        dbuser: '',
+        dbpass: '',
+        dpoptions: {
+            host: 'localhost',
+            dialect: 'mysql',
+            define: {
+                timestamps: false,
+            },
+            pool: {
+                max: 5,
+                min: 0,
+                idle: 10000,
+            },
+        },
+    },
     log: {
         dev: {
             replaceConsole: true,

@@ -1,4 +1,4 @@
-/* eslint-disable global-require*/
+/* eslint-disable global-require */
 
 require('babel-polyfill');
 const express = require('express');
@@ -8,7 +8,7 @@ const log4js = require('log4js');
 const history = require('connect-history-api-fallback');
 
 const bodyParserMiddleware = require('./middlewares/bodyParserMiddleware');
-const routers = require('./routers');
+// const routers = require('./routers');
 const config = require('../config/config');
 const log = require('../config/log');
 
@@ -50,7 +50,7 @@ if (isDebug) {
     app.use(express.static(distPath));
 }
 
-app.use('/', routers(config, log.api));
+// app.use('/', routers(config, log.api));
 
 // And run the server
 app.listen(port, host, () => {
