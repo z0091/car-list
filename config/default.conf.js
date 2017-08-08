@@ -74,5 +74,6 @@ module.exports = {
     server: {
         port: '9987',
         host: '127.0.0.1',
+        apiPrefix: '/api',
     },
 };
