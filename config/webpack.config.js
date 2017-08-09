@@ -143,7 +143,13 @@ module.exports = {
             new webpack.HotModuleReplacementPlugin(),
         ] : [],
 
-        ...isDebug ? [] : [
+        ...isDebug ? [
+            new webpack.DefinePlugin({
+                'process.env': {
+                    NODE_ENV: '"development"',
+                },
+            }),
+        ] : [
             new webpack.DefinePlugin({
                 'process.env': {
                     NODE_ENV: '"production"',

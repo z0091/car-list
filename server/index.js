@@ -5,7 +5,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const compress = require('compression');
 const log4js = require('log4js');
-// const history = require('connect-history-api-fallback');
+const history = require('connect-history-api-fallback');
 
 const bodyParserMiddleware = require('./middlewares/bodyParserMiddleware');
 const routers = require('./routers');
@@ -23,7 +23,14 @@ const hotModuleReplacement = config.get('hotWebpack');
 const app = express();
 
 app.use(log4js.connectLogger(log.http));
-// app.use(history());
+app.use(history({
+    rewrites: [
+        {
+            from: /^\/api(\?|\/.*|$)/,
+            to: '/api',
+        },
+    ],
+}));
 
 app.use(cookieParser());
 app.use(compress()); // Apply gzip compression

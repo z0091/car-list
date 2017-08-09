@@ -9,7 +9,9 @@
   "plugins": [
     "promise",
     "security",
-    "html"
+    "html",
+    "vue",
+    "pug"
   ],
   "parserOptions": {
     "ecmaVersion": 6,
