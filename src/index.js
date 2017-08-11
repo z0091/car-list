@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify';
+import ElementUI from 'element-ui';
 import App from './App.vue';
 import router from './router';
 
-Vue.use(Vuetify);
+Vue.use(ElementUI);
 
 new Vue({ // eslint-disable-line no-new
     el: '#app',
